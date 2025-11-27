@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Thumbnail Maker — Landing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>AI Thumbnail Maker</h1>
+      <p class="tag">Fast, attractive thumbnails — powered by smart image transforms.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Create eye-catching thumbnails in seconds</h2>
+        <p>Upload an image, choose a style or ask the AI to suggest one, then download ready-to-use thumbnails for YouTube, social, or ads.</p>
+
+        <div class="uploader">
+          <label class="button" for="imageInput">Upload Image</label>
+          <input id="imageInput" type="file" accept="image/*" />
+          <input id="promptInput" type="text" placeholder="Optional: Describe the style (e.g. bold text, cinematic)" />
+          <div class="row">
+            <label><input type="checkbox" id="aiEditCheckbox" /> Edit uploaded image with AI</label>
+          </div>
+          <div class="row">
+            <label for="presetSelect">Preset:</label>
+            <select id="presetSelect">
+              <option value="default">Auto</option>
+              <option value="cinematic">Cinematic</option>
+              <option value="vibrant">Vibrant</option>
+              <option value="soft">Soft</option>
+              <option value="minimal">Minimal</option>
+            </select>
+          </div>
+          <div class="controls">
+            <button id="aiGenerate" class="button primary">Generate with AI</button>
+            <button id="manualGenerate" class="button">Generate Thumbnails</button>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div id="previewArea" class="preview">
+          <p class="muted">No image uploaded — preview appears here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Generated Thumbnails</h3>
+      <div id="outputs" class="grid"></div>
+    </section>
+
+    <section class="how">
+      <h3>How it works</h3>
+      <ul>
+        <li>Upload a base image.</li>
+        <li>Click "Generate with AI" to apply suggested styles (simulated client-side).</li>
+        <li>Download any generated thumbnail in common sizes.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Built with client-side JavaScript • No server required for this demo.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
